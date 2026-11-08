@@ -1,3 +1,10 @@
+## Identitas Mahasiswa
+
+- **Nama:** Fahreza Bintang Mahesa
+- **NIM:** 312110220
+- **Kelas:** I253A
+- **Mata Kuliah:** Pemrograman Web
+
 # Aplikasi Toko Buku Online — Bilik Buku
 Aplikasi toko buku online sederhana berbasis **HTML, CSS, dan JavaScript**. Aplikasi ini dibuat sebagai proyek/tugas UTS untuk mendemonstrasikan proses login, pengelolaan katalog buku, checkout, dan pelacakan pengiriman.
 
@@ -93,14 +100,19 @@ Dokumentasi berikut digunakan untuk menunjukkan hasil pengerjaan Web Bilik Buku.
 ### Dokumentasi 
 
 ### 1. Menu Login  
+![imge alt](https://github.com/fahrezabm2801-coder/UTS_PemrogramanWeb_Toko-Buku-Online/blob/1123cd5f39bb73b44a0ea23a89aa74b1449922aa/1_login.png) 
 
 ### 2. Dasboard
+![imge alt](https://github.com/fahrezabm2801-coder/UTS_PemrogramanWeb_Toko-Buku-Online/blob/1123cd5f39bb73b44a0ea23a89aa74b1449922aa/2_dasboard.png) 
 
 ### 3. Informasi Stock
+![imge alt](https://github.com/fahrezabm2801-coder/UTS_PemrogramanWeb_Toko-Buku-Online/blob/1123cd5f39bb73b44a0ea23a89aa74b1449922aa/3_informasi%20stok.png) 
 
 ### 4. Checkout
+![imge alt](https://github.com/fahrezabm2801-coder/UTS_PemrogramanWeb_Toko-Buku-Online/blob/1123cd5f39bb73b44a0ea23a89aa74b1449922aa/4_Checkout.png) 
 
 ### 5. Tracking
+![imge alt](https://github.com/fahrezabm2801-coder/UTS_PemrogramanWeb_Toko-Buku-Online/blob/1123cd5f39bb73b44a0ea23a89aa74b1449922aa/5_tracking.png) 
 
 ### Video Dokumentasi
 https://youtu.be/EXaFadwXTnw

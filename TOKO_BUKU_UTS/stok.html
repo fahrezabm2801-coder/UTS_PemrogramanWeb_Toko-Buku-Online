@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stok Buku - Toko Buku</title><link rel="stylesheet" href="./css/style.css">
+  <script src="./js/data.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="top-brand" href="dashboard.html"> Toko Buku</a><div class="top-right"><span data-nama-pengguna>Pengguna</span><button class="btn btn-light btn-small" type="button" data-logout>Keluar</button></div></header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU UTAMA</p>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="active" href="stok.html">Informasi Stok / Katalog</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="tracking.html">Tracking Pengiriman</a>
+    </aside>
+
+    <main class="page-content">
+      <div class="page-heading">
+        <div>
+          <h1>Informasi Stok / Katalog</h1>
+          <p class="muted">Kelola daftar buku dan jumlah persediaan.</p>
+        </div>
+      </div>
+      <section class="panel">
+        <div class="toolbar">
+          <input type="search" id="cariBuku" placeholder="Cari kode, nama, atau jenis buku...">
+          <button class="btn btn-primary" id="btnTampilFormBuku" data-admin-only>+ Tambah Buku</button>
+        </div>
+
+        <form id="formBuku" class="inline-form hidden" data-admin-only>
+          <div><label for="kodeBuku">Kode Barang</label><input id="kodeBuku" required maxlength="20"></div>
+          <div><label for="judulBuku">Nama Buku</label><input id="judulBuku" required></div>
+          <div><label for="jenisBuku">Jenis Barang</label><input id="jenisBuku" required value="Buku Ajar"></div>
+          <div><label for="edisiBuku">Edisi</label><input id="edisiBuku" required></div>
+          <div><label for="hargaBuku">Harga (Rp)</label><input id="hargaBuku" type="number" min="1" required></div>
+          <div><label for="stokBuku">Stok</label><input id="stokBuku" type="number" min="0" required></div>
+          <div><label for="coverBuku">Path Cover</label><input id="coverBuku" placeholder="img/nama_file.jpg"></div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Simpan</button>
+            <button class="btn btn-light" type="button" id="btnBatalBuku">Batal</button>
+          </div>
+        </form>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Buku</th>
+                <th>Kode Barang</th>
+                <th>Jenis</th>
+                <th>Edisi</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabelBuku"></tbody>
+          </table></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

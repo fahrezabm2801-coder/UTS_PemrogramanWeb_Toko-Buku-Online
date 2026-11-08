@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan - Bilik Buku</title><link rel="stylesheet" href="./css/style.css">
+  <script src="./js/data.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="top-brand" href="dashboard.html">Bilik Buku</a>
+    <div class="top-right">
+      <span data-nama-pengguna>Pengguna</span>
+      <button class="btn btn-light btn-small" type="button" data-logout>Keluar</button>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU UTAMA</p>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Informasi Stok / Katalog</a>
+      <a class="active" href="checkout.html">Checkout</a>
+      <a href="tracking.html">Tracking Pengiriman</a>
+    </aside>
+    
+    <main class="page-content">
+      <div class="page-heading">
+        <div><h1>Form Checkout</h1>
+          <p class="muted">Masukkan informasi pemesan dan buku yang dipesan.</p>
+        </div>
+      </div>
+      
+      <form id="formCheckout" class="checkout-grid">
+        <section class="panel">
+          <h2>Informasi Checkout</h2>
+          <label for="namaPemesan">Nama Lengkap</label>
+          <input id="namaPemesan" required>
+          <label for="emailPemesan">Email</label>
+          <input id="emailPemesan" type="email" required>
+          <label for="alamatPemesan">Alamat Pengiriman</label>
+          <textarea id="alamatPemesan" rows="3" required></textarea>
+          
+          <label for="ekspedisi">Ekspedisi</label>
+          <select id="ekspedisi">
+            <option>JNE</option>
+            <option>J&T</option>
+            <option>POS Indonesia</option>
+            <option>SiCepat</option>
+          </select>
+
+          <label for="jenisPaket">Jenis Paket</label>
+          <select id="jenisPaket">
+            <option>Reguler</option>
+            <option>Express</option>
+            <option>Hemat</option>
+          </select>
+          
+          <label for="metodeBayar">Metode Pembayaran</label>
+          <select id="metodeBayar">
+            <option>Transfer Bank</option>
+            <option>COD</option>
+            <option>E-Wallet</option>
+          </select>
+        </section>
+
+        <section class="panel">
+          <h2>Detail Checkout</h2>
+          <div class="order-add">
+            <select id="pilihBuku" aria-label="Pilih buku"></select>
+            <input type="number" id="jumlahBuku" min="1" value="1" aria-label="Jumlah buku">
+            <button type="button" class="btn btn-primary" id="btnTambahItem">Tambah</button>
+          </div>
+          
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Buku</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tabelItemPesanan">
+                <tr>
+                  <td colspan="4" class="empty">Belum ada buku dipilih.</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+          
+        <div class="total-line">
+          <span>Total Pembayaran</span>
+          <strong id="totalCheckout">Rp0</strong>
+        </div>
+
+          <button class="btn btn-primary full" type="submit">Buat Pesanan</button>
+          <p class="muted small">Setelah pesanan dibuat, nomor Delivery Order akan ditampilkan.</p>
+        </section>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

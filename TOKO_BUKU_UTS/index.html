@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Bilik Buku</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/data.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <!-- halaman login -->
+    <section class="login-section">
+      <header class="brand">
+        <img src="./assets/toko buku.png" alt=""><br>
+        <strong>Bilik Buku</strong>
+      </header>
+      <div class="login-box">
+        <h1>Selamat Datang</h1>
+        <p class="muted center">Silakan login untuk melanjutkan</p>
+        <form id="formLogin">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="password" placeholder="Masukkan password" required>
+          <button class="btn btn-primary full" type="submit">Login</button>
+        </form>
+        <div class="login-links">
+          <button class="link-button" type="button" data-open-popup="popupLupaPassword">Lupa Password?</button>
+          <button class="link-button" type="button" data-open-popup="popupDaftar">Daftar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman informasi -->
+    <section class="info-section">
+      <div class="info-content">
+        <p class="eyebrow">SELAMAT DATANG DI</p>
+        <h2>Toko Buku Online</h2>
+        <p class="info-lead">Temukan berbagai buku menarik untuk menambah pengetahuan dan wawasan.</p>
+        <br>
+        <div class="service-list">
+          <div class="service-item"><b>Pengiriman</b><span>Pengiriman terpercaya</span></div>
+          <div class="service-item"><b>Transaksi</b><span>Proses pemesanan mudah</span></div>
+          <div class="service-item"><b>Bantuan</b><span>Layanan pelanggan</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Modal Lupa Password -->
+  <div class="popup" id="popupLupaPassword" role="dialog" aria-modal="true" aria-labelledby="judulLupaPassword" aria-hidden="true">
+    <div class="popup-box">
+      <button class="popup-close" type="button" data-close-popup aria-label="Tutup">&times;</button>
+      <h2 id="judulLupaPassword">Lupa Password</h2>
+      <p class="muted">Masukkan email akun dan password baru Anda.</p>
+      <form id="formLupaPassword">
+        <label for="emailReset">Email Address</label>
+        <input type="email" id="emailReset" placeholder="Masukkan email terdaftar" required>
+        <label for="passwordBaru">Password Baru</label>
+        <input type="password" id="passwordBaru" minlength="6" placeholder="Minimal 6 karakter" required>
+        <label for="konfirmasiPassword">Konfirmasi Password</label>
+        <input type="password" id="konfirmasiPassword" minlength="6" placeholder="Ulangi password baru" required>
+        <button class="btn btn-primary full" type="submit">Simpan Password Baru</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Daftar Akun -->
+  <div class="popup" id="popupDaftar" role="dialog" aria-modal="true" aria-labelledby="judulDaftar" aria-hidden="true">
+    <div class="popup-box">
+      <button class="popup-close" type="button" data-close-popup aria-label="Tutup">&times;</button>
+      <h2 id="judulDaftar">Daftar Akun Baru</h2>
+      <p class="muted">Lengkapi data berikut untuk membuat akun pengguna.</p>
+      <form id="formDaftar">
+        <label for="namaDaftar">Nama Lengkap</label>
+        <input type="text" id="namaDaftar" placeholder="Masukkan nama lengkap" required>
+        <label for="emailDaftar">Email Address</label>
+        <input type="email" id="emailDaftar" placeholder="Masukkan email aktif" required>
+        <label for="passwordDaftar">Password</label>
+        <input type="password" id="passwordDaftar" minlength="6" placeholder="Minimal 6 karakter" required>
+        <label for="konfirmasiDaftar">Konfirmasi Password</label>
+        <input type="password" id="konfirmasiDaftar" minlength="6" placeholder="Ulangi password" required>
+        <button class="btn btn-primary full" type="submit">Daftar Sekarang</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="login-footer">© 2026 Toko Buku. Semua Hak Dilindungi.</footer>
+
+</body>
+</html>

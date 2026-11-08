@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Bilik Buku</title><link rel="stylesheet" href="./css/style.css">
+  <script src="./js/data.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="top-brand" href="dashboard.html">Bilik Buku</a>
+    <div class="top-right">
+      <span data-nama-pengguna>Pengguna</span>
+      <button class="btn btn-light btn-small" type="button" data-logout>Keluar</button>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU UTAMA</p>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Informasi Stok / Katalog</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="tracking.html">Tracking Pengiriman</a>
+      <a data-admin-only href="#laporan">Laporan Pemesanan</a>
+      <a data-admin-only href="#transaksi">History Transaksi</a>
+    </aside>
+
+    <main class="page-content">
+      <div class="page-heading">
+        <div>
+          <h1 id="greeting">Selamat datang!</h1>
+          <p class="muted">Ringkasan aktivitas Toko Buku.</p>
+        </div>
+        <span class="date-label" id="tanggalHariIni"></span>
+      </div>
+      <section class="stats-grid">
+        <article class="stat-card"><span>Total Buku</span><strong id="totalBuku">0</strong></article>
+        <article class="stat-card"><span>Total Pesanan</span><strong id="totalPesanan">0</strong></article>
+        <article class="stat-card"><span>Pesanan Diproses</span><strong id="pesananProses">0</strong></article>
+        <article class="stat-card"><span>Total Transaksi</span><strong id="totalTransaksi">Rp0</strong></article>
+      </section>
+
+      <section class="panel" id="laporan">
+        <div class="panel-heading">
+          <h2>Laporan Pemesanan</h2>
+          <a href="checkout.html">Buat pesanan</a>
+        </div>
+        <p class="muted">Ringkasan jumlah pesanan dan nilai transaksi sesuai akun yang sedang login.</p>
+        <div class="report-summary">
+          <div>
+            <span>Jumlah pesanan</span>
+            <b id="laporanJumlah">0</b>
+          </div>
+          <div>
+            <span>Nilai transaksi</span>
+            <b id="laporanNilai">Rp0</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="transaksi">
+        <div class="panel-heading">
+          <h2>History Transaksi Terbaru</h2>
+          <a href="tracking.html">Lacak pesanan</a>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No. DO</th>
+                <th>Pemesan</th>
+                <th>Tanggal</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabelTransaksi">
+              <tr>
+                <td colspan="5" class="empty">Belum ada transaksi.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

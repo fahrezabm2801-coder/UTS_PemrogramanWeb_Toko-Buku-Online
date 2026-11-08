@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking - Bilik Buku</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script><script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="top-brand" href="dashboard.html">Bilik Buku</a>
+    <div class="top-right">
+      <span data-nama-pengguna>Pengguna</span>
+      <button class="btn btn-light btn-small" type="button" data-logout>Keluar</button>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU UTAMA</p>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Informasi Stok / Katalog</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="active" href="tracking.html">Tracking Pengiriman</a>
+    </aside>
+    
+    <main class="page-content">
+      <div class="page-heading">
+        <div>
+          <h1>Tracking Pengiriman</h1>
+          <p class="muted">Cari status pesanan menggunakan nomor Delivery Order.</p>
+        </div>
+      </div>
+      <section class="panel">
+        <form id="formTracking" class="tracking-search">
+          <div>
+            <label for="nomorDO">Nomor Delivery Order</label>
+            <input id="nomorDO" placeholder="Contoh: 20250012" required>
+          </div>
+        <button class="btn btn-primary" type="submit">Cari</button>
+      </form>
+      
+        <div id="hasilTracking" class="tracking-result hidden"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
